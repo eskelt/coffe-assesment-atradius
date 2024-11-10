@@ -28,3 +28,7 @@ replay_pid*
 
 ### IntelliJ IDEA ###
 .idea
+
+#OpenAPI generator
+.openapi-generator
+generated/

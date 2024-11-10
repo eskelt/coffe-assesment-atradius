@@ -1,0 +1,64 @@
+openapi: 3.0.1
+info:
+  title: Coffe Assesment API
+  description: API for retrieving paid and owed amounts for users.
+  version: 1.0.0
+
+paths:
+  /amounts/paid:
+    get:
+      summary: Get the amount paid by each user
+      description: Retrieve the total amount paid by each user.
+      operationId: getPaidAmounts
+      responses:
+        '200':
+          description: A list of users with the amounts they have paid.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserPaidAmount'
+        '500':
+          description: Server error
+
+  /amounts/owed:
+    get:
+      summary: Get the amount that each user still owes
+      description: Retrieve the remaining amount that each user still owes
+      operationId: getOwedAmounts
+      responses:
+        '200':
+          description: A list of users with the amounts they still owe.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserOwedAmount'
+        '500':
+          description: Server error
+
+components:
+  schemas:
+    UserPaidAmount:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the user
+        amountPaid:
+          type: number
+          format: float
+          description: Total amount that the user has paid
+
+    UserOwedAmount:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the user
+        amountOwed:
+          type: number
+          format: float
+          description: Total amount that the user still owes
