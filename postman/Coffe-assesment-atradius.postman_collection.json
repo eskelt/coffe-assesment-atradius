@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "91ceed19-72ab-47e7-98aa-48e69daeb262",
+		"name": "Coffe-assesment-atradius",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10059046"
+	},
+	"item": [
+		{
+			"name": "Get Paid Amounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/amounts/paid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"amounts",
+						"paid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Owed Amounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/amounts/owed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"amounts",
+						"owed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
