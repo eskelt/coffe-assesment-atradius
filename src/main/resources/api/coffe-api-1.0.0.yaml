@@ -49,7 +49,7 @@ components:
           description: Name of the user
         amountPaid:
           type: number
-          format: float
+          format: double
           description: Total amount that the user has paid
 
     UserOwedAmount:
@@ -60,5 +60,5 @@ components:
           description: Name of the user
         amountOwed:
           type: number
-          format: float
+          format: double
           description: Total amount that the user still owes
